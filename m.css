@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap') ;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+.projects,.videos,.contact,.bio{
+    font-family: 'Poppins', sans-serif;
+} 
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar{
+    position: fixed;
+    width: 100%;
+    background: rgb(7, 7, 7);
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    padding: 1px 0;
+    background: darkred;
+}
+.navbar .logo a{
+    color: #fff; 
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .logo a span{
+    color: crimson;
+    transition: all 0.3s ease;
+}  
+.navbar.sticky .logo a span{
+    color: #fff; 
+}
+
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: crimson;
+}
+.navbar.sticky .menu li a:hover{
+    color: #fff;
+}
+/* menu btn styling */
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: darkred;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up-btn:hover{
+    filter: brightness(90%);
+}
+.home{
+    display: flex;
+     background: url("media/patron.jpg") no-repeat center;
+    height: 70vh;
+    background-color: black;
+    min-height: 50px;
+    background-size: 80%;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+}
+ @media (max-width: 991px ){
+.max-width{
+    padding: 0 50px;
+}
+.menu-btn{
+    display: block;
+    z-index: 999;
+}
+.menu-btn i.active:before{
+    content: "\f00d";
+}
+.navbar .menu{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    background: #111 ;
+    text-align: center;
+    padding-top: 80px;
+    transition: all 0.3s ease;
+}
+.navbar .menu.active{
+    left: 0;
+}
+.navbar .menu li{
+    display: block;
+} 
+.navbar  .menu li a{
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 25px;
+}
+  
+}
+.projects{
+    color:#fff;
+    background: rgb(8, 8, 8);
+} 
+.projects .serv-content .card{
+    width: calc(100% -30px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 50px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}  
+.projects .serv-content .card:hover{
+    background: crimson;
+}
+.projects .serv-content .card .box{
+    transition: all 0.3s ease;
+}
+.projects .serv-content .card:hover .box{
+    transform: scale(1.05);
+}
+.projects .serv-content .card i{
+    font-size: 50px;
+    color: crimson;
+    transition: color 0.3s ease;
+}
+.projects .serv-content .card:hover i{
+    color: #fff;
+}
+.projects .serv-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.videos{
+    background-color: #fff;
+}
+.videos .owl-carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(182, 19, 19);
+   
+    
+}
+.videos.owl-carousel.serv-content{
+    width: calc(100% -30px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 50px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.videos .owl-carousel .card{
+  
+    
+    padding: 25px 35px;
+    
+    text-align: center;
+    overflow: hidden;
+    
+}
+.videos .serv-content .card:hover .box{
+    transform: scale(1.05);
+}
+.videos .serv-content .card i{
+    font-size: 50px;
+    color: crimson;
+    transition: color 0.3s ease;
+}
+.videos .serv-content .card:hover i{
+    color: #fff;
+}
+.videos .serv-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+} .serv-content .card:hover .box{
+    transform: scale(1.05);
+}
+.videos .serv-content .card i{
+    font-size: 50px;
+    color: crimson;
+    transition: color 0.3s ease;
+}
+.videos .serv-content .card:hover i{
+    color: rgb(20, 20, 20);
+}
+.videos .serv-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.blog{
+   
+background: url("media/down.jpeg") no-repeat center;     
+    height: 70vh;
+    color: rgb(250, 244, 244);
+    min-height: 100px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dot{
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none!important;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+.owl-dot.active{
+    width: 35px;
+    border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover{
+    background: rgb(250, 249, 249)!important;
+}
+.contact{
+    background-color: white;
+}
+.contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+.contact .contact-content .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact .contact-content .left p{
+    text-align: justify;
+}
+.contact .contact-content .left .icons{
+    margin: 10px 0;
+}
+.contact .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contact .contact-content .row .info{
+    margin-left: 30px;
+}
+.contact .contact-content .row i{
+    font-size: 25px;
+    color: black;
+}
+.contact .contact-content .info .head{
+    font-weight: 500;
+    font-family: 'Ubuntu', sans-serif;
+}
+.contact .contact-content .info .sub-title{
+    color: #333;
+}
+.contact .serv-content .card{
+    width: calc(100% -30px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 50px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}  
+.contact .card:hover{
+    background: crimson;
+}
+
+.contact .card i{
+    font-size: 50px;
+    color: crimson;
+    transition: color 0.3s ease;
+}
+.contact .serv-content .card:hover i{
+    color: #fff;
+}
+.contact .serv-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
